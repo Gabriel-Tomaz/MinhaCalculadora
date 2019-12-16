@@ -12,16 +12,22 @@
     <input type="radio" id="verde" class="ativa-cor input-verde" name="color">
     <input type="radio" id="azul" class="ativa-cor input-azul" name="color">
     <input checked type="radio" id="amarelo" class="ativa-cor input-amarelo" name="color">
-    <input type="radio" id="vermelho" class="ativa-cor input-vermelho" name="color"> 
+    <input type="radio" id="vermelho" class="ativa-cor input-vermelho" name="color">
+    
+    <input type="checkbox" id="ligar-tela" class="ativa-tela input-tela">
+    <div class="tela-ligada"></div>
 
     <div class="main">
         <div class="calc">
             <div class="tela-calc"></div>
             <div class="caixa">
-                <label class="label-verde" for="verde"></label>
-                <label class="label-azul" for="azul"></label>
-                <label class="label-amarelo" for="amarelo"></label>
-                <label class="label-vermelho" for="vermelho"></label>
+                <label class="label-tela" for="ligar-tela">
+                    <h5 class="on">ON</h5>
+                </label>
+                <label class="label-verde label-cor" for="verde"></label>
+                <label class="label-azul label-cor" for="azul"></label>
+                <label class="label-amarelo label-cor" for="amarelo"></label>
+                <label class="label-vermelho label-cor" for="vermelho"></label>
             </div>
             <div class="btns">
                 <button class="btn sete" value="7">7</button>

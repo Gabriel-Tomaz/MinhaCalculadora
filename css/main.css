@@ -17,7 +17,7 @@
 }
 .calc{
     width: 325px;
-    height: 75vh;
+    height: 80vh;
     background-color: #C5CAE9;
     border-radius: 30px 3px 30px 3px;
     display: flex;
@@ -33,7 +33,7 @@
     background-color: #313131;
     opacity: 0.2;
     position: absolute;
-    top: 90%;
+    top: 94%;
     left: 30%;
     border-radius: 50%;
 }
@@ -52,8 +52,19 @@
     opacity: 0.2;
     background-color: #424242;
     position: absolute;
-    top: 16.8%;
+    top: 14.2%;
     left: 57.5%;
+    z-index: 1;
+}
+.tela-ligada{
+    width: 260px;
+    height: 200px;
+    background-color: #A5D6A7;
+    position: absolute;
+    opacity: 0;
+    top: 14.2%;
+    left: 40.5%;
+    z-index: 2;
 }
 .caixa{
     width: 87%;
@@ -65,7 +76,7 @@
     align-content: center;
     align-items: center;
 }
-.caixa label{
+.label-cor{
     width: 12px;
     height: 28px;
     margin: 8px;
@@ -87,9 +98,27 @@
 .label-vermelho{
     background-color: #ef5350;
 }
+.label-tela{
+    width: 28px;
+    height: 28px;
+    background-color: #5C6BC0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    position: relative;
+    left: -44%;
+    border-radius: 50%;
+    border: solid 1px #313131;
+    box-shadow: 4px 0px rgba(0,0,0,0.2), inset 4px 0px rgba(255,255,255,0.5);
+    transform: rotate(45deg);
+}
+.on{
+    transform: rotate(-45deg);
+}
 .btn:active{
     transform: scale(0.9);
-    border: none;
+
 }
 .btns{
     width: 175px;
@@ -141,34 +170,6 @@
     margin-top: 5px;
    
 }
-.um{
-
-}
-.dois{
-
-}
-.tres{
-
-}
-.quatro{
-
-}
-.cinco{
-
-}
-.seis{
-
-}
-.sete{
-
-}
-.oito{
-
-}
-.nove{
-
-}
-
 /*Animações*/
 @keyframes scale-bg {
     0% {
@@ -188,6 +189,22 @@
     }
  }
  
+ @keyframes on-tela{
+    0% {
+        opacity: 0;
+     }
+     100% {
+       opacity: 1;
+     }
+ }
+ @keyframes off-tela{
+    0% {
+        opacity: 1;
+     }
+     100% {
+       opacity: 0;
+     }
+ }
  .cores{
     position: absolute;
     width: 100%;
@@ -227,6 +244,10 @@
     position: absolute;
     left: -100%;
  }
+ .input-tela{
+        position: absolute;
+        left: -100%;
+ }
  .input-verde:checked ~ .bg-verde{
      animation: scale-bg 1s ease-in 1s;
      animation-fill-mode: forwards;
@@ -243,6 +264,10 @@
     animation: scale-bg 1s ease-in 1s;
     animation-fill-mode: forwards;
  }
+.input-tela:checked ~ .tela-ligada{
+    animation: on-tela 1s ease-in 1s;
+    animation-fill-mode: forwards;
+}
 
  .ativa-cor:checked:not(.input-verde) ~ .bg-verde{
     animation: scale-reverse 1s ease-in;
@@ -259,4 +284,8 @@
  .ativa-cor:checked:not(.input-vermelho) ~ .bg-vermelho{
     animation: scale-reverse 1s ease-in;
     animation-fill-mode: forwards; 
+ }
+ .input-tela:not(:checked) ~ .tela-ligada{
+     animation: off-tela 1s ease-in;
+     animation-fill-mode: forwards;
  }
