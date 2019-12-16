@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+    overflow: hidden;
+}
+.main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    background: transparent;
+}
+.calc{
+    width: 325px;
+    height: 75vh;
+    background-color: #C5CAE9;
+    border-radius: 30px 3px 30px 3px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+}
+.calc::before{
+    content: " ";
+    width: 40%;
+    height: 30px;
+    background-color: #313131;
+    opacity: 0.2;
+    position: absolute;
+    top: 90%;
+    left: 30%;
+    border-radius: 50%;
+}
+.tela-calc{
+    width: 80%;
+    height: 200px;
+    background-color: #616161;
+    border-radius: 4px;
+    border: solid 10px #9FA8DA;
+    margin-top: 18px;
+}
+.tela-calc::before{
+    content: " ";
+    width: 30px;
+    height: 200px;
+    opacity: 0.2;
+    background-color: #424242;
+    position: absolute;
+    top: 16.8%;
+    left: 57.5%;
+}
+.caixa{
+    width: 87%;
+    height: 36px;
+    margin-top: 9px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: center;
+    align-items: center;
+}
+.caixa label{
+    width: 12px;
+    height: 28px;
+    margin: 8px;
+    transform: rotate(45deg);
+    border-radius: 50%;
+    cursor: pointer;
+    border: solid 1px #313131;
+    box-shadow: 3.5px 0px rgba(0,0,0,0.2), inset 3.5px 0px rgba(255,255,255,0.5);
+}
+.label-verde{
+    background-color: #81C784;
+}
+.label-azul{
+    background-color: #64B5F6;
+}
+.label-amarelo{
+    background-color: #FFF59D;
+}
+.label-vermelho{
+    background-color: #ef5350;
+}
+.btn:active{
+    transform: scale(0.9);
+    border: none;
+}
+.btns{
+    width: 175px;
+    height: 195px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-between;
+    margin-top: 15px;
+}
+.btn{
+    width: 45px;
+    height: 45px;
+    background-color: #9FA8DA;
+    border-radius: 3px;
+    border: solid 2px #7986CB;
+    box-shadow: 0px 3px 0px 0px rgba(0,0,0,0.2), inset 0px 3px 0px 0px rgba(255,255,255,0.5);
+}
+.operacao{
+    width: 100px;
+    height: 195px;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: flex-start;
+}
+.sub{
+    margin-top: 0px;
+}
+.soma{
+    margin-top: 0px;
+}
+.igual{
+    width: 95px !important;
+    margin-top: 5px;
+    background-color: #5C6BC0 !important;
+}
+.divi{
+    margin-top: 5px;
+}
+.multi{
+    margin-top: 5px;
+}
+.apagar{
+    width: 95px !important;
+    margin-top: 5px;
+   
+}
+.um{
+
+}
+.dois{
+
+}
+.tres{
+
+}
+.quatro{
+
+}
+.cinco{
+
+}
+.seis{
+
+}
+.sete{
+
+}
+.oito{
+
+}
+.nove{
+
+}
+
+/*Animações*/
+@keyframes scale-bg {
+    0% {
+       transform: scale(0);
+    }
+    100% {
+      transform: scale(4);
+    }
+ }
+ 
+ @keyframes scale-reverse {
+    0% {
+       transform: scale(4);
+    }
+    100% {
+      transform: scale(0);
+    }
+ }
+ 
+ .cores{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -3;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    transform: scale(0);
+ }
+ .bg-verde{
+     background-color: #81C784;
+ }
+ .bg-azul{
+     background-color: #64B5F6;
+ }
+ .bg-amarelo{
+     background-color: #FFF59D;
+ }
+ .bg-vermelho{
+     background-color: #ef5350;
+ }
+
+ .input-verde{
+     position: absolute;
+     left: -100%;
+ }
+ .input-azul{
+    position: absolute;
+    left: -100%;
+ }
+ .input-amarelo{
+    position: absolute;
+    left: -100%;
+ }
+ .input-vermelho{
+    position: absolute;
+    left: -100%;
+ }
+ .input-verde:checked ~ .bg-verde{
+     animation: scale-bg 1s ease-in 1s;
+     animation-fill-mode: forwards;
+ }
+ .input-azul:checked ~.bg-azul{
+    animation: scale-bg 1s ease-in 1s;
+    animation-fill-mode: forwards;
+ }
+ .input-amarelo:checked ~ .bg-amarelo{
+    animation: scale-bg 1s ease-in 1s;
+    animation-fill-mode: forwards;
+ }
+ .input-vermelho:checked ~.bg-vermelho{
+    animation: scale-bg 1s ease-in 1s;
+    animation-fill-mode: forwards;
+ }
+
+ .ativa-cor:checked:not(.input-verde) ~ .bg-verde{
+    animation: scale-reverse 1s ease-in;
+    animation-fill-mode: forwards; 
+ }
+ .ativa-cor:checked:not(.input-azul) ~ .bg-azul{
+    animation: scale-reverse 1s ease-in;
+    animation-fill-mode: forwards; 
+ }
+ .ativa-cor:checked:not(.input-amarelo) ~ .bg-amarelo{
+    animation: scale-reverse 1s ease-in;
+    animation-fill-mode: forwards; 
+ }
+ .ativa-cor:checked:not(.input-vermelho) ~ .bg-vermelho{
+    animation: scale-reverse 1s ease-in;
+    animation-fill-mode: forwards; 
+ }
