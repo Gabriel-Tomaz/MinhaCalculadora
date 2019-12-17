@@ -87,10 +87,6 @@
     border: none;
     outline: none;
 }
-.tela-ligada::placeholder{
-    
-}
-
 .caixa{
     width: 87%;
     height: 36px;
@@ -208,6 +204,7 @@
     background-size: 35%;
     background-repeat: no-repeat;
 }
+
 /*Animações*/
 @keyframes scale-bg {
     0% {
@@ -243,6 +240,8 @@
        opacity: 0;
      }
  }
+
+ /*Divs coloridas e ativação das animações.*/
  .cores{
     position: absolute;
     width: 100%;

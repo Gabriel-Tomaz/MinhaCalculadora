@@ -6,20 +6,21 @@
     <title>Calculadora</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
-    <script src='js/main.js'></script>
 </head>
 <body>
+    <!--Inputs que ativam as animações.-->
     <input type="radio" id="verde" class="ativa-cor input-verde" name="color">
     <input type="radio" id="azul" class="ativa-cor input-azul" name="color">
     <input checked type="radio" id="amarelo" class="ativa-cor input-amarelo" name="color">
     <input type="radio" id="vermelho" class="ativa-cor input-vermelho" name="color">
-    
+
+    <!--Input e div que ativam a animação da tela ligando.-->
     <input type="checkbox" id="ligar-tela" class="ativa-tela input-tela">
     <div class="tela-ligada">
         <input type="text" id="captura-num" class="captura-num" placeholder="0">
         <input type="text" id="resultado" class="resultado">
     </div>
-
+    <!--Div principal com a calculadora.-->
     <div class="main">
         <div class="calc">
             <div class="tela-calc"></div>
@@ -27,11 +28,13 @@
                 <label class="label-tela" for="ligar-tela">
                     <h5 class="on">ON</h5>
                 </label>
+                <!--Labels que fazem referência aos inputs-->
                 <label class="label-verde label-cor" for="verde"></label>
                 <label class="label-azul label-cor" for="azul"></label>
                 <label class="label-amarelo label-cor" for="amarelo"></label>
                 <label class="label-vermelho label-cor" for="vermelho"></label>
             </div>
+            <!--Botões numericos da calculadora.-->
             <div class="btns">
                 <button class="btn sete" value="7" onclick="insert(7)">7</button>
                 <button class="btn oito" value="8" onclick="insert(8)">8</button>
@@ -45,6 +48,7 @@
                 <button class="btn zero" value="0" onclick="insert(0)">0</button>
                 <button class="btn virgula" value="." onclick="insert('.')">.</button>
             </div>
+            <!--Botões de opereações da calculadora.-->
             <div class="operacao">
                 <button class="btn soma" value="+" onclick="insert('+')">+</button>
                 <button class="btn sub" value="-" onclick="insert('-')">-</button>
@@ -56,9 +60,13 @@
             </div>
         </div>
     </div>
+    <!--Div utilizadas na animação de mudar o backgroud da página.-->
     <div class="cores bg-verde"></div>
     <div class="cores bg-azul"></div>
     <div class="cores bg-amarelo"></div>
     <div class="cores bg-vermelho"></div>
+    
+    <!--Script-->
+    <script src='js/main.js'></script>
 </body>
 </html>
