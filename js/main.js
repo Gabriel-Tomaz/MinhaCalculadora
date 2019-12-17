@@ -10,6 +10,7 @@ function igual(){
 }
 function limpar(){
     document.getElementById('captura-num').value = "";
+    document.getElementById('resultado').value = "";
 }
 function apagar(){
     var valor = document.getElementById('captura-num').value;
