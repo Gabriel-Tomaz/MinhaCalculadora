@@ -15,7 +15,10 @@
     <input type="radio" id="vermelho" class="ativa-cor input-vermelho" name="color">
     
     <input type="checkbox" id="ligar-tela" class="ativa-tela input-tela">
-    <div class="tela-ligada"></div>
+    <div class="tela-ligada">
+        <input type="text" id="captura-num" class="captura-num" placeholder="0">
+        <input type="text" id="resultado" class="resultado">
+    </div>
 
     <div class="main">
         <div class="calc">
@@ -30,26 +33,26 @@
                 <label class="label-vermelho label-cor" for="vermelho"></label>
             </div>
             <div class="btns">
-                <button class="btn sete" value="7">7</button>
-                <button class="btn oito" value="8">8</button>
-                <button class="btn nove" value="9">9</button>
-                <button class="btn quatro" value="4">4</button>
-                <button class="btn cinco" value="5">5</button>
-                <button class="btn seis" value="6">6</button>
-                <button class="btn um" value="1">1</button>
-                <button class="btn dois" value="2">2</button>
-                <button class="btn tres" value="3">3</button>
-                <button class="btn zero" value="0">0</button>
-                <button class="btn virgula" value=",">,</button>
-                <button class="btn porcent" value="%">%</button>
+                <button class="btn sete" value="7" onclick="insert(7)">7</button>
+                <button class="btn oito" value="8" onclick="insert(8)">8</button>
+                <button class="btn nove" value="9" onclick="insert(9)">9</button>
+                <button class="btn quatro" value="4" onclick="insert(4)">4</button>
+                <button class="btn cinco" value="5" onclick="insert(5)">5</button>
+                <button class="btn seis" value="6" onclick="insert(6)">6</button>
+                <button class="btn um" value="1" onclick="insert(1)">1</button>
+                <button class="btn dois" value="2" onclick="insert(2)">2</button>
+                <button class="btn tres" value="3" onclick="insert(3)">3</button>
+                <button class="btn zero" value="0" onclick="insert(0)">0</button>
+                <button class="btn virgula" value="." onclick="insert('.')">.</button>
             </div>
             <div class="operacao">
-                <button class="btn soma">+</button>
-                <button class="btn sub">-</button>
-                <button class="btn multi">*</button>
-                <button class="btn divi">/</button>
-                <button class="btn apagar">c</button>
-                <button class="btn igual">=</button>
+                <button class="btn soma" value="+" onclick="insert('+')">+</button>
+                <button class="btn sub" value="-" onclick="insert('-')">-</button>
+                <button class="btn multi" value="*" onclick="insert('*')">*</button>
+                <button class="btn divi" value="/" onclick="insert('/')">/</button>
+                <button class="btn c" value="c" onclick="limpar()">C</button>
+                <button class="btn apagar" value="c" onclick="apagar()"></button>
+                <button class="btn igual" value="=" onclick="igual()">=</button>
             </div>
         </div>
     </div>
