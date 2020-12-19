@@ -302,7 +302,7 @@
     animation-fill-mode: forwards;
  }
 .input-tela:checked ~ .tela-ligada{
-    animation: on-tela 1s ease-in 1s;
+    animation: on-tela 0.2s;
     animation-fill-mode: forwards;
 }
 
@@ -323,6 +323,6 @@
     animation-fill-mode: forwards; 
  }
  .input-tela:not(:checked) ~ .tela-ligada{
-     animation: off-tela 1s ease-in;
+     animation: off-tela 0.2s;
      animation-fill-mode: forwards;
  }

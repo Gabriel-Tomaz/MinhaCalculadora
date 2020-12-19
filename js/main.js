@@ -1,18 +1,18 @@
-function insert(num){
-    var numero = document.getElementById('captura-num').value;
-    document.getElementById('captura-num').value =  numero + num;
+function getNumber(num){
+    const number = document.querySelector('#number').value;
+    document.querySelector('#number').value = number + num;
 }
-function igual(){
-    var valor = document.getElementById('captura-num').value;
-    if(valor){
-        document.getElementById('resultado').value = eval(valor);
+function equal(){
+    const expression = document.querySelector('#number').value;
+    if(expression){
+        document.querySelector('#result').value = eval(expression);
     }
 }
-function limpar(){
-    document.getElementById('captura-num').value = "";
-    document.getElementById('resultado').value = "";
+function clear(){
+    document.querySelector('#number').value = "";
+    document.querySelector('#result').value = "";
 }
-function apagar(){
-    var valor = document.getElementById('captura-num').value;
-    document.getElementById('captura-num').value = valor.substring(0,valor.length-1);
+function del(){
+    const expression = document.querySelector('#number').value;
+    document.querySelector('#number').value = expression.substring(0,expression.length-1);
 }

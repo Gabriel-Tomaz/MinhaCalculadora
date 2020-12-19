@@ -17,8 +17,8 @@
     <!--Input e div que ativam a animação da tela ligando.-->
     <input type="checkbox" id="ligar-tela" class="ativa-tela input-tela">
     <div class="tela-ligada">
-        <input type="text" id="captura-num" class="captura-num" placeholder="0" disabled>
-        <input type="text" id="resultado" class="resultado" disabled>
+        <input type="text" id="number" class="number" placeholder="0" disabled>
+        <input type="text" id="result" class="result" disabled>
     </div>
     <!--Div principal com a calculadora.-->
     <div class="main">
@@ -36,27 +36,27 @@
             </div>
             <!--Botões numericos da calculadora.-->
             <div class="btns">
-                <button class="btn sete" value="7" onclick="insert(7)">7</button>
-                <button class="btn oito" value="8" onclick="insert(8)">8</button>
-                <button class="btn nove" value="9" onclick="insert(9)">9</button>
-                <button class="btn quatro" value="4" onclick="insert(4)">4</button>
-                <button class="btn cinco" value="5" onclick="insert(5)">5</button>
-                <button class="btn seis" value="6" onclick="insert(6)">6</button>
-                <button class="btn um" value="1" onclick="insert(1)">1</button>
-                <button class="btn dois" value="2" onclick="insert(2)">2</button>
-                <button class="btn tres" value="3" onclick="insert(3)">3</button>
-                <button class="btn zero" value="0" onclick="insert(0)">0</button>
-                <button class="btn virgula" value="." onclick="insert('.')">.</button>
+                <button class="btn sete" value="7" onclick="getNumber(7)">7</button>
+                <button class="btn oito" value="8" onclick="getNumber(8)">8</button>
+                <button class="btn nove" value="9" onclick="getNumber(9)">9</button>
+                <button class="btn quatro" value="4" onclick="getNumber(4)">4</button>
+                <button class="btn cinco" value="5" onclick="getNumber(5)">5</button>
+                <button class="btn seis" value="6" onclick="getNumber(6)">6</button>
+                <button class="btn um" value="1" onclick="getNumber(1)">1</button>
+                <button class="btn dois" value="2" onclick="getNumber(2)">2</button>
+                <button class="btn tres" value="3" onclick="getNumber(3)">3</button>
+                <button class="btn zero" value="0" onclick="getNumber(0)">0</button>
+                <button class="btn virgula" value="." onclick="getNumber('.')">.</button>
             </div>
             <!--Botões de opereações da calculadora.-->
             <div class="operacao">
-                <button class="btn soma" value="+" onclick="insert('+')">+</button>
-                <button class="btn sub" value="-" onclick="insert('-')">-</button>
-                <button class="btn multi" value="*" onclick="insert('*')">*</button>
-                <button class="btn divi" value="/" onclick="insert('/')">/</button>
-                <button class="btn c" value="c" onclick="limpar()">C</button>
-                <button class="btn apagar" value="c" onclick="apagar()"></button>
-                <button class="btn igual" value="=" onclick="igual()">=</button>
+                <button class="btn soma" value="+" onclick="getNumber('+')">+</button>
+                <button class="btn sub" value="-" onclick="getNumber('-')">-</button>
+                <button class="btn multi" value="*" onclick="getNumber('*')">*</button>
+                <button class="btn divi" value="/" onclick="getNumber('/')">/</button>
+                <button class="btn c" value="c" onclick="clear()">C</button>
+                <button class="btn apagar" value="c" onclick="del()"></button>
+                <button class="btn igual" value="=" onclick="equal()">=</button>
             </div>
         </div>
     </div>
